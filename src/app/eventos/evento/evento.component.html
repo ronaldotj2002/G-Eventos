@@ -1,0 +1,243 @@
+<div class="container-fluid total">
+    <app-menu></app-menu>
+
+    <div class="container conteudo">
+
+        <small *ngIf="!preVisualizacao">Configuracao de Evento/Passo 1 de 2</small>
+        <h3>Configuração de Evento</h3>
+
+        <h3 *ngIf="!preVisualizacao" class="cont">1 de 2</h3>
+        <div class="row" *ngIf="!preVisualizacao">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Informações do Evento</h5>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="w-100">
+                                <p> <span>NOME DO EVENTO</span><br> {{ dadosEvento[0]?.informacoes?.nmEvento }}</p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>SOLICITANTE</span><br> {{ dadosEvento[0]?.informacoes?.nmSolicitante }} </p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>UNIDADE ORGANIZACIONAL RESPONSÁVEL</span><br> {{
+                                    dadosEvento[0]?.informacoes?.nmUnidadeOrganizacional }} </p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>RESPONSÁVEL PELA DISPONIBILIZAÇÃO</span><br> {{
+                                    dadosEvento[0]?.informacoes?.nmResponsavelEvento }} </p>
+                                <hr class="linha">
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <div class="w-100">
+                                <p> <span>TIPO DE PÚBLICO</span><br> {{ dadosEvento[0]?.informacoes?.tpPublico }}</p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>MODALIDADE DO EVENTO</span><br> {{
+                                    dadosEvento[0]?.informacoes?.tpModalidadeEvento }} </p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>TIPOS DE COMERCIALIZAÇÃO</span><br>
+                                    {{ dadosEvento[0]?.informacoes?.tpTipoComercializacao[0] ?
+                                    dadosEvento[0]?.informacoes?.tpTipoComercializacao[0] : '' }},
+                                    {{ dadosEvento[0]?.informacoes?.tpTipoComercializacao[1] ?
+                                    dadosEvento[0]?.informacoes?.tpTipoComercializacao[1] : '' }},
+                                    {{ dadosEvento[0]?.informacoes?.tpTipoComercializacao[2] ?
+                                    dadosEvento[0]?.informacoes?.tpTipoComercializacao[2] : '' }}
+                                </p>
+                                <hr class="linha">
+                            </div>
+
+                            <div class="w-100">
+                                <p> <span>DATA DO EVENTO</span><br> {{ dadosEvento[0]?.informacoes?.dtEvento }} </p>
+                                <hr class="linha">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Configurar Evento</h5>
+                    <div class="row mt-5">
+                        <div class="col-4">
+                            <div class="w-100">
+                                <label class="form-label">Duração do evento</label>
+                                <select class="form-select mb-3" placeholder="Selecione" [(ngModel)]="duracaoEvento">
+                                    <option value="" selected disabled>Selecione</option>
+                                    <option value="120">2 Horas</option>
+                                    <option value="240">4 Horas</option>
+                                    <option value="360">6 Horas</option>
+                                    <option value="480">8 Horas</option>
+                                </select>
+                            </div>
+
+                            <div class="w-100 mt-3">
+                                <label class="form-label">Quantidade de Participantes</label>
+                                <input type="number" class="form-control" min="20" max="121"
+                                    [(ngModel)]="nParticipantes" (change)="verificarParticipantes($event)">
+                            </div>
+
+                            <div class="w-100 mt-3">
+                                <label class="form-label">Tempo de fala do Participante</label>
+                                <select class="form-select mb-3" placeholder="Selecione" [(ngModel)]="tDeFala">
+                                    <option value="" selected disabled>Selecione</option>
+                                    <option value="1 min">1 min</option>
+                                    <option value="2 min">2 min</option>
+                                    <option value="3 min">3 min</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+
+                            <div class="w-100 input-qtd">
+                                <label class="form-label">Quantidade de salas</label>
+                                <input type="text" class="form-control" [(ngModel)]="qtdSala" disabled>
+                            </div>
+
+                            <div class="w-100 mt-3">
+                                <label class="form-label">Quantidade de sessões</label>
+                                <input type="text" class="form-control" [(ngModel)]="qtdSessao" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <button class="btn btn-primary btn-proximo" (click)="relatorios()">Próximo</button>
+                    <button class="btn btn-primary btn-salvar" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="preVisualizacao">
+
+            <h3 class="cont">2 de 2</h3>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pré-visualizar relatórios</h5>
+                        <div class="row">
+                            <div class="col-6">
+
+                                <div class="w-100">
+                                    <p>
+                                        <span class="w-50 formato">NOME</span>
+                                        <span class="w-50 formato">FORMATO</span><br>
+                                        <i class="bi bi-file-earmark-fill"></i><a href="#" (click)="downloadPdf($event)">config_evento.pdf</a> <span class="w-50 formato">PDF.</span>
+                                    </p>
+                                    <hr class="linha">
+                                    <p><i class="bi bi-file-earmark-fill"></i> <a href="#" (click)="downloadXls($event)">config_evento.xls</a><span class="w-50 formato">XLSX.</span> </p>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn btn-primary btn-proximo" (click)="finalizar()">Finalizar</button>
+                    <button class="btn btn-primary btn-salvar" (click)="voltar()">Voltar</button>
+                </div>
+                <table id="excel-table" hidden>
+                    <tr>
+                      <th>nmEvento</th>
+                      <th>nmSolicitante</th>
+                      <th>nuUnidadeOrganizacional</th>
+                      <th>nmUnidadeOrganizacional</th>
+
+                      <th>nmResponsavelEvento</th>
+                      <th>tpPublico</th>
+                      <th>nmTipoPublico</th>
+                      <th>tpModalidadeEvento</th>
+
+                      <th>nmModalidadeEvento</th>
+                      <th>tpComercializacao</th>
+                      <th>nmTipoComercializacao</th>
+                      <th>dtEvento</th>
+
+                      <th>nuDuracaoEvento</th>
+                      <th>nuParticipantes</th>
+                      <th>nuTempoFalaParticipante</th>
+                      <th>nuSalas</th>
+
+
+                    </tr>
+                    <tr>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmEvento}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmSolicitante}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nuUnidadeOrganizacional}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmUnidadeOrganizacional}}</td>
+
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmResponsavelEvento}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.tpPublico}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoPublico}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.tpModalidadeEvento}}</td>
+
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmModalidadeEvento}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.tpComercializacao}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoComercializacao}}</td>
+                      <td>{{gerarArquivoXls[0]?.informacoes?.dtEvento}}</td>
+
+                      <td>{{gerarArquivoXls[0]?.nuDuracaoEvento}}</td>
+                      <td>{{gerarArquivoXls[0]?.nuParticipantes}}</td>
+                      <td>{{gerarArquivoXls[0]?.nuTempoFalaParticipante}}</td>
+                      <td>{{gerarArquivoXls[0]?.nuSalas}}</td>
+                      
+                    </tr>
+                  </table>
+
+                    <div id="content" style="z-index: -9; float: left;">
+                        
+                        <table id="contentToConvert">
+                            <thead style="margin-top:50px;">
+                                <img src="../../../assets/img/cab1.png" />
+                                <p style="text-align:center; font-size:14px; color: #999; font-family:verdana;">Gestão De Eventos</p>
+                                
+                            </thead>
+                            <br>
+                            <br>
+                            <tbody>
+                                <tr>
+                                    
+                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuDuracaoEvento</th>
+                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuParticipantes</th>
+                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuTempoFalaParticipante</th>
+                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuSalas</th>
+                                </tr>
+                                <tr>
+                                    <td>{{gerarArquivoXls[0]?.nuDuracaoEvento}}</td>
+                                    <td>{{gerarArquivoXls[0]?.nuParticipantes}}</td>
+                                    <td>{{gerarArquivoXls[0]?.nuTempoFalaParticipante}}</td>
+                                    <td>{{gerarArquivoXls[0]?.nuSalas}}</td>
+                                </tr>
+                            </tbody>
+                            <p style="float:right">{{usuario.nome}}</p>
+                            <br><br>
+                        </table>
+                        <img src="../../../assets/img/rod1.png" />
+                    </div>
+         
+            </div>
+        </div>
+    </div>
+</div>

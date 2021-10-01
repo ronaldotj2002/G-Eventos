@@ -1,0 +1,79 @@
+<h3>Configuração de Evento</h3>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-8">
+        <div class="row">
+           
+            <div class="col-5">   
+                <span class="icon-filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                      Filtrar
+                </span>  
+                
+                    <select class="form-select mb-3" aria-label="Default select example" [(ngModel)]="status">
+                        <option value="0" disabled selected>Status</option>
+                        <option value="1">Não iniciada</option>
+                        <option value="2">Em andamento</option>
+                        <option value="3">Concluída</option>
+                    </select>
+                             
+            </div>
+            <div class="col-6 mt-4">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" [(ngModel)]="dadosBusca">
+            </div>
+            <div class="col-1 mt-4">
+                <button class="btn btn-pesquisa" type="submit" (click)="busca()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </button>
+            </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+<table class="table table-bordered">        
+        <thead>
+            <tr>
+               <th *ngFor="let c of columns">{{ c }}</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let dados of listaGrid"> 
+                <td>{{ dados?.codigoNome }}</td>
+                <td>{{ dados?.responsavel }}</td>
+                <td><span 
+                    [ngClass]="dados?.statusConfiguracao?.idStatus == 1 ? 'cor-status-um':
+                    dados?.statusConfiguracao?.idStatus == 2 ? 'cor-status-dois': 'cor-status-tres'" ></span>
+                    {{ dados?.statusConfiguracao?.nomeStatus }}</td>
+                <td>{{ dados?.ultimaAtualizacao }}</td>
+                <td><button class="btn btn-table" (click)="acessarEvento(dados)">Acessar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="col-12 footer-table">
+        <p *ngIf="mensagemGrid">Nenhum resultado para os dados informados</p>
+        <p *ngIf="!mensagemGrid">
+            <span>Linhas por página 
+                <select (change)="paginacao($event)">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+                {{ contadorLinhaEsqueda }} - {{ contadorLinhaDireita }} de {{ totalPaginacao?.length }}
+            </span>
+            <span class="mudar-pagina">
+                <i class="bi bi-chevron-bar-left"></i>                    
+                <i class="bi bi-chevron-left" (click)="mudarPaginacao('anterior')"></i>
+                <i class="bi bi-chevron-right" (click)="mudarPaginacao('proxima')"></i>
+                <i class="bi bi-chevron-bar-right"></i>
+            </span>
+        </p>
+    </div>

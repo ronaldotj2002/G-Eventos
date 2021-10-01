@@ -1,0 +1,47 @@
+
+.bg-img {
+    background-image: url('../../assets/img/img-form-login.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.form {
+    background-color: #ebebeb;
+    height: 634px;
+}
+
+.card {
+    width: 85%;
+    margin: 3vh auto;
+    border-radius: 15px;
+    padding: 20px 35px;
+    box-shadow: 0 3px #ccc;
+}
+
+h3 {
+    float: right;
+    margin:7vh 4vw 3vh 0;
+    color: #6a4ea0;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: -17px;
+}
+
+.card a {
+    color: #6a4ea0;
+}
+
+button, .btn-primary.disabled, .btn-primary:disabled {
+    float: right;
+    margin-top: 5vh;
+    background-color: #6a4ea0;
+    border-color: #6a4ea0;
+}
+
+button:hover {
+    float: right;
+    margin-top: 5vh;
+    background-color: #6a4ea0;
+    border-color: #6a4ea0;
+}

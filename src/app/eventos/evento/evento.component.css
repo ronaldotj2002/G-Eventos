@@ -1,0 +1,79 @@
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #f7f8f8;
+    min-height: 800px;
+    padding-bottom:30px;
+}
+
+.conteudo {    
+    padding-top: 80px;
+}
+
+.conteudo h3 {
+    font-size: 21px;
+    color: #999;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+small {
+    font-size: 10px;
+    margin-left: 23px;
+}
+
+h3.cont {
+    color: #5e6fb4 !important;
+}
+
+.card {
+    width: 96%;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+h5, p {
+    color: #8e8e8e;    
+}
+
+p span {
+    font-size:11px;
+    color: #5e6fb4;
+}
+
+hr.linha {
+    opacity: 1.25;
+    border: 1px solid #5e6fb0 !important;
+}
+
+.input-qtd {
+    margin-top: 16vh;
+}
+
+.btn {
+    float: right;
+    margin-right: 20px;
+    width: 100px;
+    border: 1px solid #5e6fb4;
+}
+
+.btn-salvar {
+    background-color: #fff;
+    color: #5e6fb4;
+}
+
+.btn-proximo {
+    background-color: #5e6fb4;
+    color: #fff;;
+}
+
+span.formato {
+    float: right;
+    font-size: 11px;
+    color: #5e6fb4;
+}
+
+.btns {
+    float: right;
+    margin-top: 30px;
+}

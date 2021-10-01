@@ -1,0 +1,11 @@
+<div class="container-fluid total">
+<app-menu></app-menu>
+
+<div class="container conteudo">
+    
+    <app-tabela *ngIf="gridEventos" (enviarDadosEvento)="evento($event)"></app-tabela>
+
+    <app-evento *ngIf="configuracaoEventos" ></app-evento>
+        
+    </div>
+</div>

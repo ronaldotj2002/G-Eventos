@@ -1,0 +1,82 @@
+.btn-pesquisa {
+    background-color: #daddf0;
+    border-color: #daddf0;
+}
+
+.table {
+    border-color: #5e6fb4;
+}
+
+.icon-user {
+    margin-top: -6px;
+}
+
+.icon-filter {
+    padding-left: 5px;
+}
+
+.form-select {
+    border: 1px solid #5e6fb4;
+    background-image: url('../../../assets/img/chevron-down.svg') !important
+}
+
+.footer-table {
+    border: 1px solid #5e6fb4;
+    padding: 10px 0;
+    margin-top: -17px;
+    padding-left: 32vw;
+}
+
+h3 {
+    font-size: 21px;
+    color: #999;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.cor-status-um {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+}
+.cor-status-dois {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: inline-block;
+}
+.cor-status-tres {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+}
+
+span.mudar-pagina {
+    margin-left: 30px;
+}
+
+.mudar-pagina i {
+    margin-left: 30px;
+}
+
+.btn-table {
+    background-color: #fff;
+    border: 1px solid #5e6fb4;
+    color: #5e6fb4;
+}
+
+.btn-table:hover {
+    background-color: #5e6fb4;
+    border: 1px solid #5e6fb4;
+    color: #fff;
+}
+
+tr:nth-child(2n+1){
+    background-color: #fff;
+}
+

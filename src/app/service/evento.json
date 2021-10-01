@@ -1,0 +1,728 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "nuDuracaoEvento": 120,
+      "nuParticipantes": 25,
+      "nuTempoFalaParticipante": "3 min",
+      "nuSalas": 5,
+      "nuSessoes": 6,
+      "duracaoEvento": "240",
+      "qtdParticipantes": 0,
+      "qtdSala": 11,
+      "qtdSessao": 12,
+      "tDeFala": "2 min",
+      "nParticipantes": 121
+    },
+    {
+      "id": 2,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "360",
+      "qtdParticipantes": 0,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "1 min",
+      "nParticipantes": 20
+    },
+    {
+      "id": 3,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 4,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "240",
+      "nParticipantes": 20,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "1 min"
+    },
+    {
+      "id": 5,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 6,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "120",
+      "nParticipantes": 20,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "2 min"
+    },
+    {
+      "id": 7,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 8,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 9,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": 0,
+      "nParticipantes": 0,
+      "qtdSala": 0,
+      "qtdSessao": 0,
+      "tDeFala": 0
+    },
+    {
+      "id": 10,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 11,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "360",
+      "nParticipantes": 28,
+      "qtdSala": 7,
+      "qtdSessao": 8,
+      "tDeFala": "2 min"
+    },
+    {
+      "id": 12,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 13,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 14,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "120",
+      "nParticipantes": 22,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "2 min"
+    },
+    {
+      "id": 15,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 16,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 17,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "240",
+      "nParticipantes": 20,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "1 min"
+    },
+    {
+      "id": 18,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 19,
+      "codigoNome": "Sessão de Negócios",
+      "responsavel": "Nome Sobrenome",
+      "statusConfiguracao": {
+        "idStatus": 1,
+        "nomeStatus": "Não iniciada"
+      },
+      "ultimaAtualizacao": "23 ago 2011 às 11:00 am",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios B",
+        "nmSolicitante": "Ricardo de Oliveira Nunes",
+        "nuUnidadeOrganizacional": 2154787,
+        "nmUnidadeOrganizacional": "Gestão de Qualidade",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Tipo de público",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email",
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 20,
+      "codigoNome": "Sessão de Negócios A",
+      "responsavel": "Renato de Oliveira",
+      "statusConfiguracao": {
+        "idStatus": 2,
+        "nomeStatus": "Em andamento"
+      },
+      "ultimaAtualizacao": "13 mai 2019 às 13:36 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios Á",
+        "nmSolicitante": "Márcia Alves",
+        "nuUnidadeOrganizacional": 2154788,
+        "nmUnidadeOrganizacional": "Comercial",
+        "nmResponsavelEvento": "Marcelo Alves",
+        "tpPublico": "Estudantes",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Online",
+        "tpTipoComercializacao": [
+          "Agência",
+          "Email"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "31/08/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      }
+    },
+    {
+      "id": 21,
+      "codigoNome": "Sessão de Negócios C",
+      "responsavel": "Magno Alves",
+      "statusConfiguracao": {
+        "idStatus": 3,
+        "nomeStatus": "Concluída"
+      },
+      "ultimaAtualizacao": "02 mar 2021 às 12:10 pm",
+      "informacoes": {
+        "nmEvento": "Sessão de negócios C",
+        "nmSolicitante": "Claudio de Assis",
+        "nuUnidadeOrganizacional": 2154789,
+        "nmUnidadeOrganizacional": "Gerência",
+        "nmResponsavelEvento": "Renata Oliveira",
+        "tpPublico": "Empresários",
+        "nmTipoPublico": "descrição do tipo de público que frequentará o evento",
+        "tpModalidadeEvento": "sigla do tipo de modalidade do evento.",
+        "nmModalidadeEvento": "Presencial",
+        "tpTipoComercializacao": [
+          "Ponto Parceiro"
+        ],
+        "nmTipoComercializacao": "descrição do tipo de comercialização do evento.",
+        "dtEvento": "11/09/2021",
+        "nuDuracaoEvento": null,
+        "nuParticipantes": null,
+        "nuTempoFalaParticipante": null,
+        "nuSalas": null,
+        "nuSessoes": null
+      },
+      "duracaoEvento": "480",
+      "qtdParticipantes": 0,
+      "qtdSala": 5,
+      "qtdSessao": 6,
+      "tDeFala": "1 min"
+    }
+  ]
+}
