@@ -30,9 +30,6 @@ export class ServicosService {
     return this.http.get(`${API}/eventos?responsavel=${dados}`)
   }
 
-  //http://localhost:3000/eventos?_page=1&_limit=2
-  //<http://localhost:3000/eventos?_page=1&_limit=2>; rel="first", <http://localhost:3000/eventos?_page=2&_limit=2>; rel="next", <http://localhost:3000/eventos?_page=11&_limit=2>; rel="last"
-
   carregarPaginacao(pagina:any, valor: any) {
     return this.http.get(`${API}/eventos?_page=${pagina}&_limit=${valor}`)
   }

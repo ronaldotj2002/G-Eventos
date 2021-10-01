@@ -53,7 +53,6 @@ export class AuthenticationService {
     this.usuarios.forEach(x => {
       if(usuario.nome == x.nome && Md5.init(usuario.senha) == x.senha) {
         usu = x;
-        console.log("ENTROU", usu)
       } 
     });
     return usu;
