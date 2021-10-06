@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ServicosService } from '../../service/servicos.service';
 import * as XLSX from 'xlsx';
-import jsPDF from 'jspdf';
+import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { ToastrService } from 'ngx-toastr';
+import autoTable from 'jspdf-autotable';
 
 @Component({
   selector: 'app-evento',
@@ -12,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class EventoComponent implements OnInit {
   @Input()
-  pegarEvento: any = [];
+  pegarEvento: any;
 
   duracaoEvento: number = 0;
   nParticipantes: number = 0;
@@ -23,7 +24,9 @@ export class EventoComponent implements OnInit {
   dadosEvento: any;
   preVisualizacao: boolean = false;
   gerarArquivoXls: any;
+  gerarArquivoPdf: any;
   dadosXls: any;
+  dadosSalvos: any;
   data: any;
   usuario: any;
   pdf: boolean = false;
@@ -35,9 +38,9 @@ export class EventoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.servicosService.carregarItem().subscribe((res) => {
-      this.dadosEvento = res;
-      this.dadosXls = this.dadosEvento;
+    this.servicosService.carregarItem().subscribe((res) => {      
+      this.dadosEvento = res;     
+      this.dadosXls = this.dadosEvento;      
     });
 
     this.usuario = localStorage.getItem('USER_INFO');
@@ -68,14 +71,25 @@ export class EventoComponent implements OnInit {
     };
 
     this.servicosService.salvarEvento(id, body).subscribe((res) => {
-      this.dadosXls = res;
+      if(res) {
+        console.log("patch", res);
+        this.dadosSalvos = res;
+        this.toastr.success('As informações foram salvas com sucesso!');
+      }
+      
+      this.ngOnInit();    
+    }, (err) => {
+      this.toastr.error('Ocorreu um erro ao salvar as informações!');
+      console.log("ERROR", err);      
     });
-    this.toastr.success('As informações foram salvas com sucesso!');
-    this.ngOnInit();
   }
 
   relatorios() {
     this.preVisualizacao = true;
+    if(this.preVisualizacao == true) {
+      this.gerarArquivoXls = this.dadosSalvos
+    } 
+    this.gerarArquivoPdf = this.dadosXls[0];
     this.downloadXls('');
   }
 
@@ -88,29 +102,28 @@ export class EventoComponent implements OnInit {
   }
 
   downloadPdf(e: any) {
+    
+    const doc = new jsPDF();
+
     e.stopPropagation();
     e.preventDefault();
-    this.gerarArquivoXls = this.dadosXls;
-    this.data = document.getElementById('contentToConvert');
-    html2canvas(this.data).then((canvas) => {
-      // Few necessary setting options
-      var imgWidth = 208;
-      var pageHeight = 295;
-      var imgHeight = (canvas.height * imgWidth) / canvas.width;
-      var heightLeft = imgHeight;
 
-      const contentDataURL = canvas.toDataURL('image/png');
-      let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
-      var position = 0;
-      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
-      pdf.save('new-file.pdf'); // Generated PDF
+    doc.addImage('../../../assets/img/cab1.png', 'PNG', 0, 0, 211, 20);
+    doc.text('Gestão De Eventos', 85, 30);
+    doc.addImage('../../../assets/img/rod1.png', 'PNG', 0, 277, 211, 20);
+
+    //  tabela
+    autoTable(doc, {
+      html: '#teste',
+      margin: { top: 40, right: 5, bottom: 0, left: 5 },
     });
+
+    doc.save('g-eventos.pdf');
   }
 
   downloadXls(e: any) {
     const fileName = 'ExcelSheet.xlsx';
     this.gerarArquivoXls = this.dadosXls;
-    console.log('xls', this.gerarArquivoXls);
 
     let element = document.getElementById('excel-table');
     const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);

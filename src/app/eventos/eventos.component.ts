@@ -24,9 +24,7 @@ export class EventosComponent implements OnInit {
   
   evento(dados:any) {
     this.dadosDoEvento = dados;
-    // console.log("RecebendoDados da tabela", this.dadosDoEvento)   
     this.dadosExportresp = dados;
   }
-
 
 }

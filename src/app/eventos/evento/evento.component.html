@@ -140,10 +140,14 @@
                                     <p>
                                         <span class="w-50 formato">NOME</span>
                                         <span class="w-50 formato">FORMATO</span><br>
-                                        <i class="bi bi-file-earmark-fill"></i><a href="#" (click)="downloadPdf($event)">config_evento.pdf</a> <span class="w-50 formato">PDF.</span>
+                                        <i class="bi bi-file-earmark-fill"></i><a href="#"
+                                            (click)="downloadPdf($event)">config_evento.pdf</a> <span
+                                            class="w-50 formato">PDF.</span>
                                     </p>
                                     <hr class="linha">
-                                    <p><i class="bi bi-file-earmark-fill"></i> <a href="#" (click)="downloadXls($event)">config_evento.xls</a><span class="w-50 formato">XLSX.</span> </p>
+                                    <p><i class="bi bi-file-earmark-fill"></i> <a href="#"
+                                            (click)="downloadXls($event)">config_evento.xls</a><span
+                                            class="w-50 formato">XLSX.</span> </p>
                                 </div>
 
 
@@ -160,83 +164,78 @@
                 </div>
                 <table id="excel-table" hidden>
                     <tr>
-                      <th>nmEvento</th>
-                      <th>nmSolicitante</th>
-                      <th>nuUnidadeOrganizacional</th>
-                      <th>nmUnidadeOrganizacional</th>
+                        <th>nmEvento</th>
+                        <th>nmSolicitante</th>
+                        <th>nuUnidadeOrganizacional</th>
+                        <th>nmUnidadeOrganizacional</th>
 
-                      <th>nmResponsavelEvento</th>
-                      <th>tpPublico</th>
-                      <th>nmTipoPublico</th>
-                      <th>tpModalidadeEvento</th>
+                        <th>nmResponsavelEvento</th>
+                        <th>tpPublico</th>
+                        <th>nmTipoPublico</th>
+                        <th>tpModalidadeEvento</th>
 
-                      <th>nmModalidadeEvento</th>
-                      <th>tpComercializacao</th>
-                      <th>nmTipoComercializacao</th>
-                      <th>dtEvento</th>
+                        <th>nmModalidadeEvento</th>
+                        <th>tpComercializacao</th>
+                        <th>nmTipoComercializacao</th>
+                        <th>dtEvento</th>
 
-                      <th>nuDuracaoEvento</th>
-                      <th>nuParticipantes</th>
-                      <th>nuTempoFalaParticipante</th>
-                      <th>nuSalas</th>
+                        <th>nuDuracaoEvento</th>
+                        <th>nuParticipantes</th>
+                        <th>nuTempoFalaParticipante</th>
+                        <th>nuSalas</th>
 
 
                     </tr>
                     <tr>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmEvento}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmSolicitante}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nuUnidadeOrganizacional}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmUnidadeOrganizacional}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmSolicitante}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nuUnidadeOrganizacional}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmUnidadeOrganizacional}}</td>
 
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmResponsavelEvento}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.tpPublico}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoPublico}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.tpModalidadeEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmResponsavelEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.tpPublico}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoPublico}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.tpModalidadeEvento}}</td>
 
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmModalidadeEvento}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.tpComercializacao}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoComercializacao}}</td>
-                      <td>{{gerarArquivoXls[0]?.informacoes?.dtEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmModalidadeEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.tpComercializacao}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.nmTipoComercializacao}}</td>
+                        <td>{{gerarArquivoXls[0]?.informacoes?.dtEvento}}</td>
 
-                      <td>{{gerarArquivoXls[0]?.nuDuracaoEvento}}</td>
-                      <td>{{gerarArquivoXls[0]?.nuParticipantes}}</td>
-                      <td>{{gerarArquivoXls[0]?.nuTempoFalaParticipante}}</td>
-                      <td>{{gerarArquivoXls[0]?.nuSalas}}</td>
-                      
+                        <td>{{gerarArquivoXls[0]?.duracaoEvento}}</td>
+                        <td>{{gerarArquivoXls[0]?.nParticipantes}}</td>
+                        <td>{{gerarArquivoXls[0]?.tDeFala}}</td>
+                        <td>{{gerarArquivoXls[0]?.qtdSala}}</td>
+
                     </tr>
-                  </table>
+                </table>
 
-                    <div id="content" style="z-index: -9; float: left;">
-                        
-                        <table id="contentToConvert">
-                            <thead style="margin-top:50px;">
-                                <img src="../../../assets/img/cab1.png" />
-                                <p style="text-align:center; font-size:14px; color: #999; font-family:verdana;">Gestão De Eventos</p>
-                                
-                            </thead>
-                            <br>
-                            <br>
-                            <tbody>
-                                <tr>
-                                    
-                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuDuracaoEvento</th>
-                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuParticipantes</th>
-                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuTempoFalaParticipante</th>
-                                    <th style="font-size: 12px; font-family:verdana; font-weight:bold;" align="left">nuSalas</th>
-                                </tr>
-                                <tr>
-                                    <td>{{gerarArquivoXls[0]?.nuDuracaoEvento}}</td>
-                                    <td>{{gerarArquivoXls[0]?.nuParticipantes}}</td>
-                                    <td>{{gerarArquivoXls[0]?.nuTempoFalaParticipante}}</td>
-                                    <td>{{gerarArquivoXls[0]?.nuSalas}}</td>
-                                </tr>
-                            </tbody>
-                            <p style="float:right">{{usuario.nome}}</p>
-                            <br><br>
-                        </table>
-                        <img src="../../../assets/img/rod1.png" />
-                    </div>
-         
+
+                <table id="teste" hidden>
+
+                    <thead>
+                        <tr>
+                            <th>nuDuracaoEvento</th>
+                            <th>nuParticipantes</th>
+                            <th>nuTempoFalaParticipante</th>
+                            <th>nuSalas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{gerarArquivoPdf?.duracaoEvento}}</td>
+                            <td>{{gerarArquivoPdf?.nParticipantes}}</td>
+                            <td>{{gerarArquivoPdf?.tDeFala}}</td>
+                            <td>{{gerarArquivoPdf?.qtdSala}}</td>
+                        </tr>
+                        <tr>
+
+                            <td>Responsável: {{usuario.nome}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
             </div>
         </div>
     </div>

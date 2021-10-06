@@ -8,10 +8,10 @@ import { EventoComponent } from './eventos/evento/evento.component';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
-  { path: 'eventos', component: EventosComponent, canActivate:[AuthGuardService] },
-  { path: 'evento', component: EventoComponent, canActivate:[AuthGuardService] }
-];
-
+  { path: 'eventos', component: EventosComponent},
+  { path: 'evento', component: EventoComponent}
+]; 
+//canActivate:[AuthGuardService]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

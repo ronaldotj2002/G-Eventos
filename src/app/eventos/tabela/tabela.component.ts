@@ -71,14 +71,11 @@ export class TabelaComponent implements OnInit {
                 this.listaGrid = res;
                 this.listaGrid == '' ? this.mensagemGrid = true : this.mensagemGrid = false;
 
-                console.log("busca 2", this.listaGrid)
-
               }
             )           
           } else {
             this.listaGrid = res;
             this.mensagemGrid = false;
-            console.log("busca 1", this.listaGrid)
           }       
         }
       )
@@ -93,9 +90,8 @@ export class TabelaComponent implements OnInit {
     this.servicosService.carregarPaginacao(this.start, this.numPagina).subscribe(
       (res) => {
         this.listaGrid = res;
-        this.contadorLinhaEsqueda = 1;
+        // this.contadorLinhaEsqueda = 1;
         this.contadorLinhaDireita = this.numPagina;
-        console.log("pafinação", res);
       }
     )
 
@@ -107,13 +103,12 @@ export class TabelaComponent implements OnInit {
       this.qtdLinhaInicial = this.numPagina 
       this.contadorLinhaEsqueda = this.contadorLinhaEsqueda + this.qtdLinhaInicial;
       this.contadorLinhaDireita = this.contadorLinhaDireita + this.qtdLinhaInicial;
-      console.log("qtdLinhaInicial",this.contadorLinhaEsqueda);
+     
 
       this.servicosService.proximaPagina(this.proximaPagina, this.numPagina).subscribe(
         (res) => {
           this.listaGrid = res;
-          console.log("proxima", this.proximaPagina);
-          console.log("listaGrid", this.listaGrid);
+        
         }
       )
     } 
@@ -122,15 +117,11 @@ export class TabelaComponent implements OnInit {
       this.paginaAnterior = valor
       this.contadorLinhaEsqueda = this.contadorLinhaEsqueda - this.qtdLinhaInicial;
       this.contadorLinhaDireita = this.contadorLinhaDireita - this.qtdLinhaInicial;
-      console.log("paginaAnterior", this.paginaAnterior);
-      console.log("proximaPagina", this.proximaPagina);
-      console.log("valor", valor);
 
 
       this.servicosService.proximaPagina(this.paginaAnterior, this.numPagina).subscribe(
         (res) => {
           this.listaGrid = res;
-          // console.log("listaGrid", this.listaGrid);
         }
       )
     }
