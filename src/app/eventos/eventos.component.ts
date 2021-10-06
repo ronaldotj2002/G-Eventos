@@ -19,9 +19,7 @@ export class EventosComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  
-  
-  
+    
   evento(dados:any) {
     this.dadosDoEvento = dados;
     this.dadosExportresp = dados;

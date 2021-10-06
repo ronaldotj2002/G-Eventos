@@ -1,12 +1,11 @@
 
-.bg-img {
-    background-image: url('../../assets/img/img-form-login.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+img {
+    margin-left: 12px;
 }
+
 .form {
     background-color: #ebebeb;
-    height: 634px;
+    height: 591px;
 }
 
 .card {
@@ -44,4 +43,25 @@ button:hover {
     margin-top: 5vh;
     background-color: #6a4ea0;
     border-color: #6a4ea0;
+}
+
+@media (max-width:386px) {
+    h3 {
+        float: none !important;
+        margin:7vh 4vw 3vh 0;
+        color: #6a4ea0;
+        font-weight: bold;
+        text-align: center !important;
+    }
+}
+
+@media (min-width:2500px) {
+    img {
+        margin-left: 52px;
+    }
+
+    .form {
+        height: 634px;
+    }
+
 }

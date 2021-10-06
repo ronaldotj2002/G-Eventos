@@ -86,6 +86,7 @@ export class TabelaComponent implements OnInit {
 
   paginacao(dados:any) {
     this.start = 1;    
+    this.contadorLinhaEsqueda = 1;
     this.numPagina = parseInt(dados.target.value);
     this.servicosService.carregarPaginacao(this.start, this.numPagina).subscribe(
       (res) => {
@@ -99,10 +100,12 @@ export class TabelaComponent implements OnInit {
 
   mudarPaginacao(dados:any) {
     if(dados === 'proxima') {
-      this.proximaPagina = this.proximaPagina + 1;  
-      this.qtdLinhaInicial = this.numPagina 
-      this.contadorLinhaEsqueda = this.contadorLinhaEsqueda + this.qtdLinhaInicial;
-      this.contadorLinhaDireita = this.contadorLinhaDireita + this.qtdLinhaInicial;
+      if(this.contadorLinhaDireita !== this.totalPaginacao?.length){
+        this.proximaPagina = this.proximaPagina + 1;  
+        this.qtdLinhaInicial = this.numPagina 
+        this.contadorLinhaEsqueda = this.contadorLinhaEsqueda + this.qtdLinhaInicial;
+        this.contadorLinhaDireita = this.contadorLinhaDireita + this.qtdLinhaInicial;
+      }
      
 
       this.servicosService.proximaPagina(this.proximaPagina, this.numPagina).subscribe(
@@ -113,18 +116,20 @@ export class TabelaComponent implements OnInit {
       )
     } 
     if(dados === 'anterior') {
-      const valor = this.proximaPagina - this.paginaAnterior
-      this.paginaAnterior = valor
-      this.contadorLinhaEsqueda = this.contadorLinhaEsqueda - this.qtdLinhaInicial;
-      this.contadorLinhaDireita = this.contadorLinhaDireita - this.qtdLinhaInicial;
+      if(this.contadorLinhaEsqueda !== 1){
 
-
-      this.servicosService.proximaPagina(this.paginaAnterior, this.numPagina).subscribe(
-        (res) => {
-          this.listaGrid = res;
+        const valor = this.proximaPagina - this.paginaAnterior
+        this.paginaAnterior = valor
+        this.contadorLinhaEsqueda = this.contadorLinhaEsqueda - this.qtdLinhaInicial;
+        this.contadorLinhaDireita = this.contadorLinhaDireita - this.qtdLinhaInicial;        
+        
+        this.servicosService.proximaPagina(this.paginaAnterior, this.numPagina).subscribe(
+          (res) => {
+            this.listaGrid = res;
+          }
+          )
         }
-      )
-    }
+      }
   }
 
   acessarEvento(evento:any) {
